@@ -6,13 +6,11 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:16:57 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/09 15:32:48 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 11:39:22 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_strlen.c"
-
-int		ft_strlen(const char *str);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -41,7 +39,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 }
 
 
-int	main(void)
+/* int	main(void)
 {
 	char	source[7] = "bb";
 	char	dest[100] = "aaaa";
@@ -54,3 +52,4 @@ int	main(void)
 	printf("%zu\n", ft_strlcat(dest1, source1, size));
 	printf("%s\n", dest1);
 }
+ */

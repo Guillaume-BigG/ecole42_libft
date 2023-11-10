@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:45:45 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/09 15:09:27 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 11:39:17 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_strlen.c"
-
-int		ft_strlen(const char *str);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -34,13 +32,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (len);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	original[10] = "hello";
 	char	copy[15] = "my friend";
 	char	copy2[15] = "my friend";
-    int size = 15;
+    int size = 3;
 
 	printf("%zu et %s\n", ft_strlcpy(copy, original, size), copy);
 	printf("%lu et %s\n", strlcpy(copy2, original, size), copy2);
-}
+} */
