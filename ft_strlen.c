@@ -6,14 +6,14 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 21:01:11 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/09 15:07:15 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 10:18:23 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

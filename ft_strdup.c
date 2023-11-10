@@ -6,7 +6,7 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 09:17:16 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 09:26:27 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 09:42:46 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,5 @@ int	main(void)
 
 	dup = ft_strdup(src);
 	printf("%s\n", dup);
+	free(dup);
 }
