@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 20:48:06 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/06 20:54:37 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:34:06 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
@@ -23,14 +20,4 @@ int	ft_isalnum(int c)
 	}
 	else
 		return (0);
-}
-
-int	main(int argc, char *argv[])
-{
-	int c;
-	(void)argc;
-
-	c = atoi(argv[1]);
-	printf("the function isalnum gives the result %d\n", isalnum(c));
-	printf("my own function ft_isalnum gives the result %d\n", ft_isalnum(c));
 }

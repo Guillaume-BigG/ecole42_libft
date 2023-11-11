@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:42:27 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/09 17:31:50 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:33:44 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *str, size_t n)
 {
@@ -25,15 +22,4 @@ void	ft_bzero(void *str, size_t n)
 		*(unsigned char *)(str + i) = 0;
 		i++;
 	}
-}
-
-int	main(int argc, char *argv[])
-{
-	(void)argc;
-	char *str = argv[1];
-	bzero(str, 3);
-	printf("the function bzero gives the result %s\n", str);
-	char *str2 = argv[2];
-	ft_bzero(str2, 3);
-	printf("my own function ft_bezero gives the result %s\n", str2);
 }

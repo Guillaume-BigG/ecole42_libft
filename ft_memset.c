@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:15:44 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/07 18:30:02 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:35:36 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t n)
 {
@@ -26,15 +23,4 @@ void	*ft_memset(void *str, int c, size_t n)
 		i++;
 	}
 	return (str);
-}
-
-int	main(int argc, char *argv[])
-{
-	(void)argc;
-	char *str = argv[1];
-	memset(str + 2, '#', 3);
-	printf("the function memset gives the result %s\n", str);
-	char *str2 = argv[2];
-	ft_memset(str2 + 2, '#', 3);
-	printf("my own function ft_memset gives the result %s\n", str2);
 }

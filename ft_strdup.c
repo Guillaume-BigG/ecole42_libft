@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 09:17:16 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 09:42:46 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:35:50 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strlen.c"
-#include<stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *src)
 {
@@ -30,14 +29,4 @@ char	*ft_strdup(const char *src)
 	}
 	dup[i] = '\0';
 	return (dup);
-}
-
-int	main(void)
-{
-	char	src[] = "Let's go Pikachu";
-	char	*dup;
-
-	dup = ft_strdup(src);
-	printf("%s\n", dup);
-	free(dup);
 }

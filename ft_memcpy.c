@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:55:35 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/07 20:32:40 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:35:15 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -28,18 +25,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 	}
 	return (dest);
-}
-
-int	main(int argc, char *argv[])
-{
-	(void)argc;
-	char *src = argv[1];
-    char *dest = argv[2];
-	char *src2 = argv[1];
-    char *dest2 = argv[2];
-    
-	memcpy(dest, src, 7);
-	printf("the function memcpy gives the result %s\n", dest);
-	ft_memcpy(dest2, src2, 7);
-	printf("my own function ft_memcpy gives the result %s\n", dest2);
 }

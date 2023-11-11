@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:43:22 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/07 22:14:01 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 17:46:46 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -25,36 +22,24 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
     bsrc = (unsigned char*) src;
     
 	i = 0;
-	if (!src && !dest)
+	if (src == dest)
 		return (dest);
 	if (bdest > bsrc)
 	{
-    	while (++i < n)
+    	while (i++ < n)
 		{
             bdest[n - i] = bsrc[n - i];
         }
     }
 	else
 	{
+        i = 0;
         while (n > 0)
 		{
-            *(bdest++) = *(bsrc++);
+            *(bdest + i) = *(bsrc + i);
             n--;
+            i++;
         }
     }	
 	return (dest);
-}
-
-int	main(int argc, char *argv[])
-{
-	(void)argc;
-	char *src = argv[1];
-    char *dest = argv[2];
-	char *src2 = argv[1];
-    char *dest2 = argv[2];
-    
-	memmove(dest, src, 3);
-	printf("the function memmove gives the result %s\n", dest);
-	ft_memmove(dest2, src2, 3);
-	printf("my own function ft_memmove gives the result %s\n", dest2);
 }

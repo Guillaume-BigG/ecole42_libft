@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:20:36 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/09 17:47:22 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 19:19:46 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -21,42 +20,11 @@ void	*ft_calloc(size_t count, size_t size)
 
     i = 0;
 	total = count * size;
-	if (count == 0 || size == 0)
+	if (size != 0 && count > (size_t) - 1 / size)
 		return (NULL);
 	calloc = malloc(total);
 	if (calloc == NULL)
         return NULL;
-	while (i < total)
-	{
-		((char *)calloc)[i] = 0;
-        i++;
-	}
+	ft_bzero(calloc, total);
 	return (calloc);
-}
-
-int	main(void)
-{
-	size_t	count;
-	size_t	size;
-	int		*arr;
-
-	count = 5;
-	size = sizeof(int);
-	arr = (int *)calloc(count, size);
-	if (arr != NULL)
-	{
-		printf("Memory allocation successful.\n");
-		// Print the elements to verify they are initialized to zero
-		for (size_t i = 0; i < count; i++)
-		{
-			printf("arr[%zu] = %d\n", i, arr[i]);
-		}
-		// Don't forget to free the allocated calloc when done
-		free(arr);
-	}
-	else
-	{
-		printf("Memory allocation failed.\n");
-	}
-	return (0);
 }

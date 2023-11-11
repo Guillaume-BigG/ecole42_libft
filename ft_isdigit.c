@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 20:29:16 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/09 17:05:45 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:34:37 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -23,14 +20,4 @@ int	ft_isdigit(int c)
 	}
 	else
 		return (0);
-}
-
-int	main(int argc, char *argv[])
-{
-	int c;
-	(void)argc;
-
-	c = atoi(argv[1]);
-	printf("the function isdigit gives the result %d\n", isdigit(c));
-	printf("my own function ft_isdigit gives the result %d\n", ft_isdigit(c));
 }

@@ -3,26 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 09:30:19 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 11:08:38 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 20:13:58 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;
+	size_t length;
 
-	if (start < 0 || start >= ft_strlen(s) || !s)
+	if (!s)
 		return (NULL);
-	sub = (char *)malloc((len + 1) * sizeof(char));
+	length = ft_strlen(s);
+	if (start > length)
+		len = 0;
+	else if ( len > (length - start))
+	{
+		len = length - start;
+	}
+	sub = (char *) malloc((len + 1) * sizeof(char));
 	if (sub == NULL)
 		return (NULL);
     i = 0;
@@ -34,23 +39,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
     }
 	sub[i] = '\0';
 	return (sub);
-}
-
-int	main(void)
-{
-	const char	*original = "Hello";
-	int			start;
-	int			len;
-	char		*sub;
-
-	start = 10;
-	len = 10;
-	sub = ft_substr(original, start, len);
-	if (sub != NULL)
-	{
-		printf("Original: %s\n", original);
-		printf("Substring: %s\n", sub);
-		free(sub);
-	}
-	return (0);
 }

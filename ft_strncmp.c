@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncmp.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:34:27 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/09 15:44:12 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:36:45 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -25,15 +24,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	}
 	return (0);
-}
-
-int	main(void)
-{
-	char			first[] = "maman";
-	char			second[] = "mab";
-	unsigned int	n;
-
-	n = 4;
-	printf("%d\n", ft_strncmp(first, second, n));
-	printf("%d\n", strncmp(first, second, n));
 }

@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 15:51:15 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 16:38:09 by gbeaudoi         ###   ########.fr       */
+/*   Created: 2023/11/08 13:47:25 by gbeaudoi          #+#    #+#             */
+/*   Updated: 2023/11/10 19:10:56 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hay, const char *need, size_t len)
+char* ft_strrchr(const char * str, int c)
 {
-	size_t	i;
-	size_t	j;
+    int i;
+    char* s;
 
-	i = 0;
-	if (!need[i])
-		return ((char *)hay);
-	while (hay[i] && i < len)
-	{
-		j = 0;
-		while ((j + i) < len && need[j] == hay[i + j])
-		{
-			if (!need[j + 1])
-				return ((char *)hay + i);
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+    s = (char*) str;
+    if (!str)
+        return (NULL);
+    i = ft_strlen(s);
+    if (c == 0)
+        return (s + i);
+    while (i >= 0)
+    {
+        if (s[i] == (char) c)
+            return (s + i);
+        i--;
+    }
+    return (NULL);
 }

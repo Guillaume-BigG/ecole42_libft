@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:45:45 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 11:39:17 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:36:22 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strlen.c"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -31,14 +31,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (len);
 }
-
-/* int	main(void)
-{
-	char	original[10] = "hello";
-	char	copy[15] = "my friend";
-	char	copy2[15] = "my friend";
-    int size = 3;
-
-	printf("%zu et %s\n", ft_strlcpy(copy, original, size), copy);
-	printf("%lu et %s\n", strlcpy(copy2, original, size), copy2);
-} */

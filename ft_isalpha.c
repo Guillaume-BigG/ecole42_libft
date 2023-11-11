@@ -1,19 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:19:52 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/06 20:15:34 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:34:18 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -23,14 +20,4 @@ int	ft_isalpha(int c)
 	}
 	else
 		return (0);
-}
-
-int	main(int argc, char *argv[])
-{
-	int c;
-	(void)argc;
-
-	c = atoi(argv[1]);
-	printf("the function isalpha gives the result %d\n", isalpha(c));
-	printf("my own function ft_isalpha gives the result %d\n", ft_isalpha(c));
 }

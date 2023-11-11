@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 15:51:15 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 16:38:09 by gbeaudoi         ###   ########.fr       */
+/*   Created: 2023/11/08 13:48:33 by gbeaudoi          #+#    #+#             */
+/*   Updated: 2023/11/10 18:10:11 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hay, const char *need, size_t len)
+char* ft_strchr(const char * str, int c)
 {
-	size_t	i;
-	size_t	j;
+    int i;
+    char* s;
 
-	i = 0;
-	if (!need[i])
-		return ((char *)hay);
-	while (hay[i] && i < len)
+    s = (char*) str;
+
+    i = 0;
+	while (s[i] != (char)c)
 	{
-		j = 0;
-		while ((j + i) < len && need[j] == hay[i + j])
-		{
-			if (!need[j + 1])
-				return ((char *)hay + i);
-			j++;
-		}
+		if (s[i] == '\0')
+			return (NULL);
 		i++;
 	}
-	return (NULL);
+	return (s + i);
 }

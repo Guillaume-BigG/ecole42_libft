@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:33:50 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/09 16:59:38 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:33:37 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_isdigit.c"
-
-int	ft_isdigit(int c);
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -37,12 +35,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (nb * sign);
-}
-
-int	main(void)
-{
-	const char *str = "12345";
-	int number = atoi(str);
-	printf("Converted integer: %d\n", number);
-	return (0);
 }

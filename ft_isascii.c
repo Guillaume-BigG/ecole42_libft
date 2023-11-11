@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
+/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:45:12 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/07 16:49:56 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/10 16:34:27 by gbeaudoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
@@ -23,14 +20,4 @@ int	ft_isascii(int c)
 	}
 	else
 		return (0);
-}
-
-int	main(int argc, char *argv[])
-{
-	int c;
-	(void)argc;
-
-	c = atoi(argv[1]);
-	printf("the function isascii gives the result %d\n", isascii(c));
-	printf("my own function ft_isascii gives the result %d\n", ft_isascii(c));
 }
