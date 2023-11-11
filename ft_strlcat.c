@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:16:57 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 16:36:14 by gbeaudoi         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:00:38 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t l_dest;
 
 	l_dest = ft_strlen(dst);
-    l_src = ft_strlen(src);
+	l_src = ft_strlen(src);
 	i = l_dest;
 	j = 0;
 	if (l_dest >= size)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:43:22 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 17:46:46 by gbeaudoi         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:00:17 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,32 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-    unsigned char* bdest;
-    unsigned char* bsrc;
+	size_t i;
+	unsigned char *bdest;
+	unsigned char *bsrc;
 
-    bdest = (unsigned char*) dest;
-    bsrc = (unsigned char*) src;
-    
+	bdest = (unsigned char *)dest;
+	bsrc = (unsigned char *)src;
+
 	i = 0;
 	if (src == dest)
 		return (dest);
 	if (bdest > bsrc)
 	{
-    	while (i++ < n)
+		while (i++ < n)
 		{
-            bdest[n - i] = bsrc[n - i];
-        }
-    }
+			bdest[n - i] = bsrc[n - i];
+		}
+	}
 	else
 	{
-        i = 0;
-        while (n > 0)
+		i = 0;
+		while (n > 0)
 		{
-            *(bdest + i) = *(bsrc + i);
-            n--;
-            i++;
-        }
-    }	
+			*(bdest + i) = *(bsrc + i);
+			n--;
+			i++;
+		}
+	}
 	return (dest);
 }

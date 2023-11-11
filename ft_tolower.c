@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:35:01 by gbeaudoi          #+#    #+#             */
-/*   Updated: 2023/11/08 15:26:00 by gbeaudoi         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:00:59 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if(c>= 65 && c <= 90)
-        return c + 32;
-    else
-        return c;
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeaudoi <gbeaudoi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:15:57 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/10 16:36:02 by gbeaudoi         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:00:35 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*join;
-	size_t	len_join;
+	char *join;
+	size_t len_join;
 
 	len_join = ft_strlen(s1) + ft_strlen(s2) + 1;
-    join = malloc(sizeof(char) * len_join);
-    if (!join)
-        return (NULL);
-    ft_strlcpy(join, s1, len_join);
-    ft_strlcat(join, s2, len_join);
-    return (join);
+	join = malloc(sizeof(char) * len_join);
+	if (!join)
+		return (NULL);
+	ft_strlcpy(join, s1, len_join);
+	ft_strlcat(join, s2, len_join);
+	return (join);
 }
