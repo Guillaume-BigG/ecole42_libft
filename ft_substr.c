@@ -6,7 +6,7 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 09:30:19 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/11 10:00:56 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/12 15:06:33 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *sub;
-	size_t i;
-	size_t length;
+	char	*sub;
+	size_t	i;
+	size_t	length;
 
 	if (!s)
 		return (NULL);
@@ -24,9 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > length)
 		len = 0;
 	else if (len > (length - start))
-	{
 		len = length - start;
-	}
 	sub = (char *)malloc((len + 1) * sizeof(char));
 	if (sub == NULL)
 		return (NULL);

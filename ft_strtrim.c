@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 15:16:57 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/11 11:08:44 by guillaumebe      ###   ########.fr       */
+/*   Created: 2023/11/11 10:50:05 by guillaumebe       #+#    #+#             */
+/*   Updated: 2023/11/11 11:40:35 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t j;
-	size_t l_src;
-	size_t l_dest;
+	size_t s_size;
+	char *trim;
 
-	l_dest = ft_strlen(dst);
-	l_src = ft_strlen(src);
-	i = l_dest;
-	j = 0;
-	if (l_dest >= size)
-		return (size + l_src);
-	else
-	{
-		while (src[j] && i < size - 1)
-		{
-			dst[i] = src[j];
-			i++;
-			j++;
-		}
-		dst[i] = '\0';
-	}
-	return (l_dest + l_src);
+	if (!s1)
+		return (NULL);
+	if (!set || !set[0] || !ft_strlen(s1))
+		return (ft_strdup(s1));
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	s_size = ft_strlen(s1);
+	if (s_size == 0)
+		return (ft_strdup(s1));
+	while (s_size && ft_strchr(set, s1[s_size]))
+		s_size--;
+	trim = ft_substr((char *)s1, 0, s_size + 1);
+	return (trim);
 }
