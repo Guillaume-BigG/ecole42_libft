@@ -6,7 +6,7 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 11:54:24 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/12 15:06:04 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/12 16:42:23 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,13 @@ static char	**ft_strdup_word(char **split, char const *s, char c)
 	}
 	return (split);
 }
-
-char	**ft_split(char const *s, char c)
+static int	ft_count_word(char const *s, char c)
 {
-	int		i;
-	int		word;
-	char	**split;
+	int	i;
+	int	word;
 
-	split = NULL;
-	word = 0;
 	i = 0;
-	if (!s)
-		return (NULL);
+	word = 0;
 	while (s[i])
 	{
 		while (s[i] && (s[i] == c))
@@ -58,6 +53,17 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && !(s[i] == c))
 			i++;
 	}
+	return (word);
+}
+char	**ft_split(char const *s, char c)
+{
+	char	**split;
+	int		word;
+
+	split = NULL;
+	if (!s)
+		return (NULL);
+	word = ft_count_word(s, c);
 	split = malloc(sizeof(char *) * (word + 1));
 	if (split == NULL)
 		return (NULL);
