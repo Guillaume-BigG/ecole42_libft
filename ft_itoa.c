@@ -6,7 +6,7 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:27:46 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/12 17:22:55 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/12 17:30:42 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 
 	nb = (long)n;
 	size = ft_countsize(nb);
-    sign = 0;
+	sign = 0;
 	if (n < 0)
 	{
 		sign = 1;
