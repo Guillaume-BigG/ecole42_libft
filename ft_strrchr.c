@@ -6,7 +6,7 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:47:25 by gbeaudoi          #+#    #+#             */
-/*   Updated: 2023/11/11 10:00:52 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/12 18:42:52 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strrchr(const char *str, int c)
 	char *s;
 
 	s = (char *)str;
-	if (!str)
-		return (NULL);
 	i = ft_strlen(s);
 	if (c == 0)
 		return (s + i);

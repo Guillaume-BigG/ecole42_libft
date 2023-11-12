@@ -6,7 +6,7 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:16:57 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/11 11:08:44 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/12 21:43:43 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t j;
-	size_t l_src;
-	size_t l_dest;
+	size_t	i;
+	size_t	j;
+	size_t	l_src;
+	size_t	l_dest;
 
-	l_dest = ft_strlen(dst);
+	l_dest = 0;
+	while (l_dest < size && dst[l_dest] != '\0')
+		l_dest++;
 	l_src = ft_strlen(src);
 	i = l_dest;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: guillaumebeaudoin <guillaumebeaudoin@st    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:45:45 by guillaumebe       #+#    #+#             */
-/*   Updated: 2023/11/11 11:08:49 by guillaumebe      ###   ########.fr       */
+/*   Updated: 2023/11/12 18:45:08 by guillaumebe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t i;
 	size_t len;
 
-	if (!src)
-		return (0);
 	len = ft_strlen(src);
 	i = 0;
 	if (!size || !dst)
